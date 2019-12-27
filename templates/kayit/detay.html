@@ -1,0 +1,18 @@
+{% extends '../base.html' %}
+
+{% block aciklama %}
+Kayıt Listesi 
+{% endblock %}
+
+{% block baslik %}
+Kayıt No :{{kayit.pk}}
+{% endblock %}
+
+{% block content %}
+
+<h2>{{kayit.tcKimlikNo}}</h2>
+<h2>{{kayit.adi}}</h2>
+<h2>{{kayit.soyadi}}</h2>
+<h2>{{kayit.cinsiyet}}</h2>
+
+{% endblock %}

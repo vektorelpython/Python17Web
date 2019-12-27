@@ -4,5 +4,6 @@ from . import views
 
 
 urlpatterns = [
-    path('',views.kayitliste,name="listkayit")
+    path('liste/',views.kayitliste,name="kayitliste"),
+    path('detay/<int:pk>',views.kayitdetay,name="kayitdetay"),
 ]
