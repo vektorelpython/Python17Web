@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 class KayitModel(models.Model):
-    adi = models.CharField(max_length=200)
+    adi = models.CharField(max_length=200,verbose_name="Adı")
     soyadi = models.CharField(max_length=200)
     cinsiyetCh = [("1","Erkek"),("2","Kız")]
     cinsiyet = models.CharField(max_length=10,choices=cinsiyetCh)
