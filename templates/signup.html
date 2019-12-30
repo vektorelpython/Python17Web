@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block aciklama %}
+Üye Kayıt Ekranı
+{% endblock %}
+
+{% block baslik %}
+
+{% endblock %}
+
+{% block content %}
+<div style="width: fit-content;height: fit-content;">
+<form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">Kayıt Ol</button>
+</form>
+</div>
+{% endblock %}

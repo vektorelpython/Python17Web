@@ -18,14 +18,19 @@
 
 		<!-- Nav -->
 			<nav id="menu">
+				<span style="color:#FFF;" >
+					{% if user.is_authenticated %}
+					Merhaba {{user.username}}!
+					<p><a href="{% url 'logout' %}">Çıkış</a></p>
+					{% else %}
+					<a href="{% url 'login' %}">Üye Giriş</a>
+					<br>
+					<a href="{% url 'signup' %}">Üye Kayıt</a>
+					{% endif %}
+				</span>
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="{% url 'kayitliste' %}">Kayıtlar</a></li>
-					<li><span style="color:#FFF;" >Üyelik İşlemleri</span>
-					<ul class="links">
-					<li><a href="{% url 'login' %}">Üye Giriş</a></li>
-					</ul>
-					</li>
+					<li><a href="{% url 'kayitliste' %}">Kayıtlar</a></li>					</li>
 				</ul>
 			</nav>
 
