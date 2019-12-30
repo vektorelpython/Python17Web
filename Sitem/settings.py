@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth', #uyelik işlemleri için kullanılacak
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -104,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'tr-TR'
 
 TIME_ZONE = 'UTC'
 
@@ -122,3 +122,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '' 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),
 os.path.join(BASE_DIR,'assets'))
+
+LOGIN_REDIRECT_URL = '/'

@@ -10,7 +10,9 @@
 	<body>
 		<!-- Header -->
 			<header id="header" class="alt">
-				<div class="logo"><a href="index.html">Python 17 Web Projesi</a></div>
+				
+				<div class="logo"><a href="index.html">Python 17 Web Projesi</a>
+						</div>
 				<a href="#menu">Menu</a>
 			</header>
 
@@ -19,6 +21,11 @@
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="{% url 'kayitliste' %}">Kayıtlar</a></li>
+					<li><span style="color:#FFF;" >Üyelik İşlemleri</span>
+					<ul class="links">
+					<li><a href="{% url 'login' %}">Üye Giriş</a></li>
+					</ul>
+					</li>
 				</ul>
 			</nav>
 
