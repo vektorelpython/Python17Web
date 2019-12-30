@@ -1,7 +1,9 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 class KayitModel(models.Model):
+    kayit_eden = models.ForeignKey('auth.user',on_delete="CASCADE",default=1)
     adi = models.CharField(max_length=200,verbose_name="Adı")
     soyadi = models.CharField(max_length=200)
     cinsiyetCh = [("1","Erkek"),("2","Kız")]
