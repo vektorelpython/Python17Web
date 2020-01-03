@@ -19,6 +19,16 @@
 
 		<!-- Nav -->
 			<nav id="menu">
+				<span style="color:#FFF;" >
+					{% if user.is_authenticated %}
+					Merhaba {{user.username}}!
+					<p><a href="{% url 'logout' %}">Çıkış</a></p>
+					{% else %}
+					<a href="{% url 'login' %}">Üye Giriş</a>
+					<br>
+					<a href="{% url 'signup' %}">Üye Kayıt</a>
+					{% endif %}
+				</span>
 				<ul class="links">
 					<li><a href="{% url 'home' %}">Ana Sayfa</a></li>
 					<li><a href="{% url 'kayitliste' %}">Kayıtlar</a></li>

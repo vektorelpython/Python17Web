@@ -16,3 +16,7 @@ class KayitModel(models.Model):
 
     def __str__(self):
         return str(self.tcKimlikNo)
+
+
+    class Meta:
+        db_table = 'kayitlar'

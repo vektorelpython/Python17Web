@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,get_object_or_404,redirect
 from .models import KayitModel
 from .forms import KayitForm
 
@@ -12,5 +12,13 @@ def kayitdetay(request,pk):
     return render(request,"kayit/detay.html",{"kayit":kayit})
 
 def yenikayit(request):
-    form = KayitForm()
+    if request.method == "POST":
+        form = KayitForm(request.POST)
+        if form.is_valid():
+            kayit = form.save(commit=False)
+            kayit.kayit_eden = request.user
+            kayit.save()
+            return redirect('kayitOK')
+    else:
+        form = KayitForm()
     return render(request,"kayit/yenikayit.html",{"form":form})

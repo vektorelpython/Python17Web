@@ -1,0 +1,19 @@
+{% extends '../base.html' %}
+
+{% block aciklama %}
+Kayıt Listesi 
+{% endblock %}
+
+{% block baslik %}
+{% endblock %}
+
+{% block content %}
+
+<h1>Kaydınız gerçekleşti yönlendiriliyorsunuz</h1>
+<script>
+    setTimeout(function(){
+       window.location.href ='http://127.0.0.1:8000';
+    }, 5000);
+ </script>
+
+{% endblock %}
