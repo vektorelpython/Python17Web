@@ -25,7 +25,7 @@ SECRET_KEY = 'd8pa=7(bp)2ni)i&7gc^#7^jr1m!2s@^fr_o&!!*htrig@tr&%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["vektorelpython17.pythonanywhere.com"]
+ALLOWED_HOSTS = ["vektorelpython17.pythonanywhere.com","127.0.0.1"]
 
 
 # Application definition
@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'accounts.apps.AccountsConfig',
     'Kayit',
+    'apiVektorel.apps.ApivektorelConfig',
 ]
 
 MIDDLEWARE = [

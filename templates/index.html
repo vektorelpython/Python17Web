@@ -11,7 +11,7 @@
 		<!-- Header -->
 			<header id="header" class="alt">
 				
-				<div class="logo"><a href="index.html">Python 17 Web Projesi</a>
+				<div class="logo"><a href="{% url 'home' %}">Python 17 Web Projesi</a>
 						</div>
 				<a href="#menu">Menu</a>
 			</header>
@@ -29,7 +29,7 @@
 					{% endif %}
 				</span>
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="{% url 'home' %}">Home</a></li>
 					<li><a href="{% url 'kayitliste' %}">Kayıtlar</a></li>					</li>
 				</ul>
 			</nav>
