@@ -9,8 +9,9 @@ Kayıtlar
 {% endblock %}
 
 {% block content %}
-
+{% if user.is_authenticated %}
 <a href="{% url 'yenikayit' %}">Yeni Kayıt Ekle</a>
+{% endif %}
 {% for kayit in kayitlar %}
 <a href="{% url 'kayitdetay' pk=kayit.pk %}">
 <h3>{{kayit.tcKimlikNo}}</h3>
